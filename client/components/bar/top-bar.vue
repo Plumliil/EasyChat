@@ -16,6 +16,7 @@
 
 <style lang="scss">
 	.top-bar {
+		z-index: 999;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -28,6 +29,7 @@
 		padding-right: $uni-spacing-col-base;
 		padding-left: $uni-spacing-col-base;
 		padding-top: var(--status-bar-height);
+		padding-bottom: 5px;
 		border-bottom: 1px solid #F8F8FF;
 
 		.top-bar-left {

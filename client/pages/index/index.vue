@@ -1,21 +1,23 @@
 <template>
 	<view class="content">
-		<view class="top-bar">
-			<view class="top-bar-left">
-				<image src="../../static/images/index/p4.jpeg" mode=""></image>
-			</view>
-			<view class="top-bar-center">
-				<image src="../../static/images/index/logo.png" mode="" class="logo"></image>
-			</view>
-			<view class="top-bar-right">
-				<view class="top-bar-right">
-					<image src="../../static/images/index/add.png" mode=""></image>
+		<top-bar class="topBar">
+			<template #left>
+				<view class="barLeft">
+					<image src="../../static/images/index/p4.jpeg" mode=""></image>
 				</view>
-				<view class="top-bar-right">
+			</template>
+			<template #center>
+				<view class="barCenter">
+					<image src="../../static/images/index/logo.png" mode="" class="logo"></image>
+				</view>
+			</template>
+			<template #right>
+				<view class="barRight">
+					<image src="../../static/images/index/add.png" mode=""></image>
 					<image src="../../static/images/index/search.png" mode=""></image>
 				</view>
-			</view>
-		</view>
+			</template>
+		</top-bar>
 		<view class="main">
 			<!-- <view class="apply">
 				申请申请申请申请申请申请申请申请申请申请申请申请申请申请申请申请
@@ -40,7 +42,12 @@
 <script>
 	import datas from '../../commons/js/datas.js';
 	import changeTime from '../../commons/js/utils/time.js';
+	import topBar from '../../components/bar/top-bar.vue';
+
 	export default {
+		components: {
+			topBar
+		},
 		data() {
 			return {
 				friends: []
@@ -63,62 +70,46 @@
 </script>
 
 <style lang="scss">
-	@import '../../commons/css/mycss.scss';
 	.content {
 		display: flex;
 		flex-direction: column;
-		// align-items: center;
-		// justify-content: center;
 	}
 
-	// .top-bar {
-	// 	position: fixed;
-	// 	top: 0;
-	// 	left: 0;
-	// 	display: flex;
-	// 	justify-content: space-between;
-	// 	width: 100%;
-	// 	height: 44px;
-	// 	background: #ffffff;
-	// 	padding-right: $uni-spacing-col-base;
-	// 	padding-left: $uni-spacing-col-base;
-	// 	border-bottom: 1px solid $uni-border-color;
-	// 	padding-top: var(--status-bar-height);
+	.topBar {
+		.barLeft {
+			flex: 1;
 
-	// 	.top-bar-left {
-	// 		flex: 1;
+			image {
+				margin-top: 5px;
+				width: 40px;
+				height: 40px;
+				border-radius: 8px;
+			}
+		}
 
-	// 		image {
-	// 			margin-top: 5px;
-	// 			width: 34px;
-	// 			height: 34px;
-	// 			border-radius: 8px;
-	// 		}
-	// 	}
+		.barCenter {
+			flex: 2;
+			text-align: center;
 
-	// 	.top-bar-center {
-	// 		flex: 2;
-	// 		text-align: center;
+			.logo {
+				margin-top: 10.5px;
+				width: 44px;
+				height: 21px;
+			}
+		}
 
-	// 		.logo {
-	// 			margin-top: 10.5px;
-	// 			width: 44px;
-	// 			height: 21px;
-	// 		}
-	// 	}
+		.barRight {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-	// 	.top-bar-right {
-	// 		flex: 1;
-	// 		display: flex;
-	// 		justify-content: space-around;
-	// 		align-items: center;
-
-	// 		image {
-	// 			width: 26px;
-	// 			height: 26px;
-	// 		}
-	// 	}
-	// }
+			image {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
 
 	.main {
 		margin-top: 50px;
@@ -221,7 +212,5 @@
 				}
 			}
 		}
-
-
 	}
 </style>
