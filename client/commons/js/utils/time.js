@@ -18,8 +18,8 @@ export default {
 		let nD = now.getDate();
 		if (D === nD && M === nM && Y === nY) {
 			// 当天的时间
-			h = h > 10 ? h : '0' + h;
-			m = m > 10 ? m : '0' + m;
+			h = h > 10 ? h : h;
+			m = m > 10 ? m : m;
 			return h + ':' + m
 		}
 		// 昨天时间

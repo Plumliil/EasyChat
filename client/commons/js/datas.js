@@ -28,7 +28,99 @@ export default {
 			name: '老四',
 			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
 			time: new Date()
-		}]
+		}, {
+			id: 4,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		}, {
+			id: 5,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		}, {
+			id: 6,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		}, {
+			id: 7,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		}, {
+			id: 8,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		}, {
+			id: 9,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		}, {
+			id: 10,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		}, {
+			id: 11,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		},, {
+			id: 12,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		},, {
+			id: 13,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		},, {
+			id: 14,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		},, {
+			id: 15,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老四',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		},, {
+			id: 16,
+			imgUrl: 'p4.jpeg',
+			tip: 10,
+			name: '老六',
+			message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
+			time: new Date()
+		},
+		]
 		return furiendsInfo;
 
 	}
