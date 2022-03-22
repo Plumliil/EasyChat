@@ -14,7 +14,7 @@
 			<template #right>
 				<view class="barRight">
 					<image src="../../static/images/index/add.png" mode=""></image>
-					<image src="../../static/images/index/search.png" mode=""></image>
+					<image src="../../static/images/index/search.png" mode="" @tap="toSearch"></image>
 				</view>
 			</template>
 		</top-bar>
@@ -57,6 +57,11 @@
 			this.getFriends();
 		},
 		methods: {
+			toSearch(){
+				uni.navigateTo({
+					url:'../search/search'
+				})
+			},
 			getFriends: function() {
 				this.friends = datas.friends();
 				this.friends.forEach(item => {
