@@ -6,7 +6,7 @@
 			</view>
 			<view class="top-bar-center">
 			</view>
-			<view class="top-bar-right">
+			<view class="top-bar-right" @tap="toSignup()">
 				注册
 			</view>
 		</view>
@@ -17,34 +17,51 @@
 			<text class="tit">登录</text>
 			<text class="msg">欢迎来到EasyChat</text>
 			<view class="inputs">
-				<input class="uname" type="text" value="" placeholder="请输入邮箱"/>
-				<input class="pword" type="password" value="" placeholder="请输入密码"/>
+				<input class="uname" v-model="user" type="text" value="" placeholder="请输入邮箱" />
+				<input class="pword" v-model="password" type="password" value="" placeholder="请输入密码" />
 			</view>
-			<text class="tip">用户名或密码错误</text>
-			<button type="default">进入 EasyChat</button>
+			<text class="tip" v-if="!isValid">用户名或密码错误!</text>
+			<button type="default" @click="subSignin()">进入 EasyChat</button>
 		</view>
 	</view>
 </template>
 
 <script>
-	export default{
-		data(){
-			return{
-				
+	export default {
+		data() {
+			return {
+				isValid: true,
+				user:'',
+				password:''
 			}
 		},
-		methods:{
-			
+		methods: {
+			// 跳转
+			toSignup() {
+				uni.navigateTo({
+					url: '../signup/signup'
+				})
+			},
+			subSignin(){
+				if (!this.user||!this.password) return this.isValid=false;
+				this.isValid=true;
+				let userData={
+					user:this.user,
+					password:this.password
+				}
+				console.log(userData);
+			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	.signin{
+	.signin {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+
 		.top-bar {
 			position: fixed;
 			top: 0;
@@ -57,10 +74,11 @@
 			padding-right: $uni-spacing-col-base;
 			padding-left: $uni-spacing-col-base;
 			padding-top: var(--status-bar-height);
-		
+
 			.top-bar-left {
 				flex: 1;
 				line-height: 44px;
+
 				image {
 					margin-top: 5px;
 					width: 20px;
@@ -68,6 +86,7 @@
 					border-radius: 8px;
 				}
 			}
+
 			.top-bar-right {
 				flex: 1;
 				display: flex;
@@ -77,22 +96,26 @@
 				line-height: 44px;
 			}
 		}
-		.logo{
+
+		.logo {
 			margin-top: 120px;
-			image{
+
+			image {
 				width: 96px;
 				height: 45.82px;
 			}
 		}
-		.content{
+
+		.content {
 			position: relative;
 			width: 100%;
 			margin-top: 32px;
 			display: flex;
 			flex-direction: column;
 			text-align: left;
+
 			// text-indent: 20px;
-			.tit{
+			.tit {
 				width: 56px;
 				height: 40px;
 				font-family: PingFangSC-Medium;
@@ -102,37 +125,42 @@
 				font-weight: 500;
 				margin-left: 25px;
 			}
-			.msg{
+
+			.msg {
 				width: 204px;
 				height: 28px;
 				font-family: PingFangSC-Regular;
 				font-size: 20px;
-				color: rgba(39,40,50,0.50);
+				color: rgba(39, 40, 50, 0.50);
 				letter-spacing: 0;
 				font-weight: 400;
 				margin-left: 25px;
 				margin-top: 10px;
 			}
-			.inputs{
+
+			.inputs {
 				width: 100%;
 				margin: 20px;
-				input{
+
+				input {
 					width: 95%;
 					height: 55px;
 					border-bottom: 1px solid gray;
 				}
 			}
-			.tip{
+
+			.tip {
 				position: absolute;
 				bottom: 80px;
 				margin-left: 25px;
-				color: #FF5D5B ;
+				color: #FF5D5B;
 			}
-			button{
+
+			button {
 				width: 260px;
 				height: 48px;
 				background: #FFE431;
-				box-shadow: 0px 25px 16px -18px rgba(255,228,49,0.4);
+				box-shadow: 0px 25px 16px -18px rgba(255, 228, 49, 0.4);
 				border-radius: 24px;
 				font-weight: 700;
 				margin-top: 50px;
