@@ -21,7 +21,7 @@
 				申请申请申请申请申请申请申请申请申请申请申请申请申请申请申请申请
 			</view> -->
 			<view class="friends">
-				<view class="friend-list" v-for="friend in friends" :key="friend.id">
+				<view class="friend-list" v-for="friend in friends">
 					<view class="photo_tip">
 						<image :src="friend.imgUrl" mode="" class="photo"></image>
 						<text class="tip">{{friend.tip}}</text>
@@ -41,7 +41,6 @@
 	import datas from '../../commons/js/datas.js';
 	import changeTime from '../../commons/js/utils/time.js';
 	export default {
-
 		data() {
 			return {
 				friends: []
@@ -54,17 +53,17 @@
 			getFriends: function() {
 				this.friends = datas.friends();
 				this.friends.forEach(item => {
+					console.log(item.imgUrl);
 					item.imgUrl = '../../static/images/index/' + item.imgUrl;
-					console.log(item.time);
 					item.time = changeTime.dateTime(item.time)
 				})
-				console.log(this.friends)
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
+	@import '../../commons/css/mycss.scss';
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -72,54 +71,54 @@
 		// justify-content: center;
 	}
 
-	.top-bar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		height: 44px;
-		background: #ffffff;
-		padding-right: $uni-spacing-col-base;
-		padding-left: $uni-spacing-col-base;
-		border-bottom: 1px solid $uni-border-color;
-		padding-top: var(--status-bar-height);
+	// .top-bar {
+	// 	position: fixed;
+	// 	top: 0;
+	// 	left: 0;
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	width: 100%;
+	// 	height: 44px;
+	// 	background: #ffffff;
+	// 	padding-right: $uni-spacing-col-base;
+	// 	padding-left: $uni-spacing-col-base;
+	// 	border-bottom: 1px solid $uni-border-color;
+	// 	padding-top: var(--status-bar-height);
 
-		.top-bar-left {
-			flex: 1;
+	// 	.top-bar-left {
+	// 		flex: 1;
 
-			image {
-				margin-top: 5px;
-				width: 34px;
-				height: 34px;
-				border-radius: 8px;
-			}
-		}
+	// 		image {
+	// 			margin-top: 5px;
+	// 			width: 34px;
+	// 			height: 34px;
+	// 			border-radius: 8px;
+	// 		}
+	// 	}
 
-		.top-bar-center {
-			flex: 2;
-			text-align: center;
+	// 	.top-bar-center {
+	// 		flex: 2;
+	// 		text-align: center;
 
-			.logo {
-				margin-top: 10.5px;
-				width: 44px;
-				height: 21px;
-			}
-		}
+	// 		.logo {
+	// 			margin-top: 10.5px;
+	// 			width: 44px;
+	// 			height: 21px;
+	// 		}
+	// 	}
 
-		.top-bar-right {
-			flex: 1;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
+	// 	.top-bar-right {
+	// 		flex: 1;
+	// 		display: flex;
+	// 		justify-content: space-around;
+	// 		align-items: center;
 
-			image {
-				width: 26px;
-				height: 26px;
-			}
-		}
-	}
+	// 		image {
+	// 			width: 26px;
+	// 			height: 26px;
+	// 		}
+	// 	}
+	// }
 
 	.main {
 		margin-top: 50px;

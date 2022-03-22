@@ -5,20 +5,31 @@
 		// 	"style": {
 		// 		"navigationStyle": "custom"
 		// 	}
-		// },
-		{
-			"path": "pages/login/login",
-			"style": {
-				"navigationStyle": "custom"
-			}
-		}
-		// ,
+		// }
 		// {
 		// 	"path": "pages/signin/signin",
 		// 	"style": {
 		// 		"navigationStyle": "custom"
 		// 	}
+		// },
+		// {
+		// 	"path": "pages/signup/signup",
+		// 	"style": {
+		// 		"navigationStyle": "custom"
+		// 	}
 		// }
+		// {
+		// 	"path": "pages/search/search",
+		// 	"style": {
+		// 		"navigationStyle": "custom"
+		// 	}
+		// }
+		{
+			"path": "./pages/details/simple",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
