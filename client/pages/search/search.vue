@@ -38,12 +38,12 @@
 
 <script>
 	import topBar from '../../components/bar/top-bar.vue';
-	import userNotice from '../../components/user/user-notice.vue';
+	import member from '../../components/user/member.vue';
 	import datas from '../../commons/js/datas.js'
 	export default {
 		components: {
 			topBar,
-			userNotice
+			member
 		},
 		data() {
 			return {

@@ -152,7 +152,7 @@ function searchData() {
 		imgUrl: 'p4.jpeg',
 		tip: 10,
 		name: '老四',
-		email:'laosi@tt.com',
+		email:'laosiaaaaaaaaaaaaaaaaaaaaaaa@tt.com',
 		message: '词是一种诗的别体，萌芽于南朝，是隋唐时兴起的一种新的文学样式。',
 		time: new Date()
 	}];

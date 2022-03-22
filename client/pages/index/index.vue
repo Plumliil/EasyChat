@@ -34,7 +34,16 @@
 					</view>
 					<text class="time">{{friend.time}}</text>
 				</view>
+				<member :data="friends">
+					<template #tip="{item}">
+						<text>{{item.tip}}</text>
+					</template>
+				</member>
 			</view>
+
+			<!-- <member :data="friends" >
+			 
+		 </member> -->
 		</view>
 	</view>
 </template>
@@ -43,10 +52,12 @@
 	import datas from '../../commons/js/datas.js';
 	import changeTime from '../../commons/js/utils/time.js';
 	import topBar from '../../components/bar/top-bar.vue';
+	import member from '../../components/user/member.vue';
 
 	export default {
 		components: {
-			topBar
+			topBar,
+			member
 		},
 		data() {
 			return {
@@ -57,13 +68,13 @@
 			this.getFriends();
 		},
 		methods: {
-			toSearch(){
+			toSearch() {
 				uni.navigateTo({
-					url:'../search/search'
+					url: '../search/search'
 				})
 			},
 			getFriends: function() {
-				this.friends = datas.friends();
+				this.friends = datas.searchData();
 				this.friends.forEach(item => {
 					console.log(item.imgUrl);
 					item.imgUrl = '../../static/images/index/' + item.imgUrl;
