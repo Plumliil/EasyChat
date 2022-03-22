@@ -23,12 +23,6 @@
 			"style": {
 				"navigationStyle": "custom"
 			}
-		},
-		{
-			"path": "./pages/details/simple",
-			"style": {
-				"navigationStyle": "custom"
-			}
 		}
 	],
 	"globalStyle": {
