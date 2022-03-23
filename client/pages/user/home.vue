@@ -28,9 +28,9 @@
 				<view class="item">
 					<view class="item-left"><text>签名</text></view>
 					<view class="item-cen">
-						<text>看没看懂阿凡达，的局啊地卡斯蒂略噩…</text>
+						<text>{{userInfo.uname}}</text>
 					</view>
-					<view class="toRight">
+					<view class="toRight" @click="modifyMe('签名',userInfo.uname)">
 						<image src=".. /../static/images/commons/toRight.png" mode="">
 						</image>
 					</view>
@@ -50,9 +50,9 @@
 				<view class="item">
 					<view class="item-left"><text>昵称</text></view>
 					<view class="item-cen">
-						<text>看阿凡达</text>
+						<text>{{userInfo.name}}</text>
 					</view>
-					<view class="toRight" @click="modifyMe">
+					<view class="toRight" @click="modifyMe('昵称',userInfo.name,'name')">
 						<image src=".. /../static/images/commons/toRight.png" mode="">
 						</image>
 					</view>
@@ -97,17 +97,7 @@
 
 			</view>
 		</view>
-		<!-- 		<view :class="[{modify:true},{modifyAppear:!isModify}]">
-			<view class="modify-header">
-				<view class="close" @click="cancelModify">取消</view>
-				<view class="title">签名</view>
-				<view class="define" @click="defineModify">确定</view>
-			</view>
-			<view class="modify-con">
-				<textarea value="" placeholder="修改内容" v-model="modifyDate" />
-			</view>
-		</view> -->
-		<modify :isModify="isModify" title="昵称" @cancel="cancelModify" @define="defineModify">
+		<modify :isModify="isModify" :modifyDate="modifyDate" @cancel="cancelModify" @define="defineModify">
 
 		</modify>
 		<bottom-bar class="bottomBar">
@@ -135,6 +125,17 @@
 				format: true
 			})
 			return {
+				userInfo:{
+					img:'',
+					uname:'wazsaaaaaaaaaaaaaaaaaaaaaaaa',
+					name:'ls',
+					registe:new Date(),
+					sex:'男',
+					birthday:'2001-06-21',
+					email:'xxxx@tt.com',
+					tel:'1221331241',
+					password:'*********'
+				},
 				sexArr: ['男', '女', '未知'],
 				index: 0,
 				date: currentDate,
@@ -143,7 +144,9 @@
 				cropFilePath: ".. /../static/images/index/p2.jpeg",
 				// 修改
 				modifyDate: '',
-				isModify: false
+				isModify: false,
+				// modTitle:'',
+				// modDate:''
 			}
 		},
 		computed: {
@@ -225,15 +228,21 @@
 				this.tempFilePath = "";
 			},
 			// 修改
-			modifyMe(e) {
+			modifyMe(title,date,type) {
+				// this.modTitle=title;
+				// this.modDate=date;
+				this.modifyDate={
+					type:type,
+					title:title,
+					date:date
+				}
 				this.isModify = true;
-				console.log(e);
 			},
 			cancelModify() {
 				this.isModify = false;
 
 			},
-			defineModify(data) {
+			defineModify(data,type) {
 				this.isModify = false;
 				console.log(data);
 			}

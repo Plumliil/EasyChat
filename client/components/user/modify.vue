@@ -2,48 +2,43 @@
 	<view :class="[{modify:true},{modifyAppear:!isModify}]">
 		<view class="modify-header">
 			<view class="close" @click="cancelModify">取消</view>
-			<view class="title">{{title}}</view>
+			<view class="title" @click="cm">{{modifyDate.title}}</view>
 			<view class="define" @click="defineModify">确定</view>
 		</view>
 		<view class="modify-con">
-			<textarea value="" placeholder="修改内容" v-model="modifyDate" />
+			<textarea v-model="changedData" placeholder="填入新的内容..." />
+		</view>
+		<view class="modify-old">
+			<text>{{modifyDate.date}}</text>
 		</view>
 	</view>
 </template>
 
 <script>
 	export default {
-		props: {
-			isModify: {
-				type: Boolean,
-				required: true,
-				default: false
-			},
-			title:{
-				type:String,
-				required:true,
-				default:'修改'
-			}
-		},
+		props: [
+			'isModify',
+			'modifyDate'
+		],
 		data() {
 			return {
-				modifyDate: '',
-				// isModify: false
+				changedData: ''
 			}
 		},
 		onLoad() {
-			console.log(props);
+			console.log(prop);
+			this.changedData = this.modifyDate.date
 		},
 		methods: {
 			cancelModify() {
-				// this.isModify = false;
 				this.$emit('cancel', this.isModify)
-
 
 			},
 			defineModify() {
-				this.$emit('define', this.modifyDate)
-				// this.isModify = false;
+				this.$emit('define', this.changedData)
+			},
+			cm() {
+				console.log(this);
 			}
 		}
 	}
@@ -115,6 +110,18 @@
 				text-indent: 20px;
 				line-height: 2;
 			}
+
+		}
+
+		.modify-old {
+			width: 343px;
+			height: 193px;
+			background: #F3F4F6;
+			border-radius: 10px;
+			margin: auto;
+			margin-top: 50px;
+			text-indent: 20px;
+			line-height: 2;
 		}
 	}
 
