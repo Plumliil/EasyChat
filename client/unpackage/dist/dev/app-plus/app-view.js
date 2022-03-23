@@ -324,89 +324,16 @@ var render = function() {
             "v-uni-view",
             { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
             [
-              _vm._l(_vm._$g(14, "f"), function(friend, $10, $20, $30) {
-                return _c(
-                  "v-uni-view",
-                  {
-                    key: friend,
-                    staticClass: _vm._$g("14-" + $30, "sc"),
-                    attrs: { _i: "14-" + $30 }
-                  },
-                  [
-                    _c(
-                      "v-uni-view",
-                      {
-                        staticClass: _vm._$g("15-" + $30, "sc"),
-                        attrs: { _i: "15-" + $30 }
-                      },
-                      [
-                        _c("v-uni-image", {
-                          staticClass: _vm._$g("16-" + $30, "sc"),
-                          attrs: {
-                            src: _vm._$g("16-" + $30, "a-src"),
-                            mode: "",
-                            _i: "16-" + $30
-                          }
-                        }),
-                        _c(
-                          "v-uni-text",
-                          {
-                            staticClass: _vm._$g("17-" + $30, "sc"),
-                            attrs: { _i: "17-" + $30 }
-                          },
-                          [_vm._v(_vm._$g("17-" + $30, "t0-0"))]
-                        )
-                      ],
-                      1
-                    ),
-                    _c(
-                      "v-uni-view",
-                      {
-                        staticClass: _vm._$g("18-" + $30, "sc"),
-                        attrs: { _i: "18-" + $30 }
-                      },
-                      [
-                        _c(
-                          "v-uni-text",
-                          {
-                            staticClass: _vm._$g("19-" + $30, "sc"),
-                            attrs: { _i: "19-" + $30 }
-                          },
-                          [_vm._v(_vm._$g("19-" + $30, "t0-0"))]
-                        ),
-                        _c(
-                          "v-uni-text",
-                          {
-                            staticClass: _vm._$g("20-" + $30, "sc"),
-                            attrs: { _i: "20-" + $30 }
-                          },
-                          [_vm._v(_vm._$g("20-" + $30, "t0-0"))]
-                        )
-                      ],
-                      1
-                    ),
-                    _c(
-                      "v-uni-text",
-                      {
-                        staticClass: _vm._$g("21-" + $30, "sc"),
-                        attrs: { _i: "21-" + $30 }
-                      },
-                      [_vm._v(_vm._$g("21-" + $30, "t0-0"))]
-                    )
-                  ],
-                  1
-                )
-              }),
               _c("member", {
-                attrs: { _i: 22 },
+                attrs: { _i: 14 },
                 scopedSlots: _vm._u([
                   {
                     key: "tip",
                     fn: function(ref, _svm, _si) {
                       var item = ref.item
                       return [
-                        _c("v-uni-text", { attrs: { _i: "24-" + _si } }, [
-                          _vm._v(_svm._$g("24-" + _si, "t0-0"))
+                        _c("v-uni-text", { attrs: { _i: "16-" + _si } }, [
+                          _vm._v(_svm._$g("16-" + _si, "t0-0"))
                         ])
                       ]
                     }
@@ -414,7 +341,7 @@ var render = function() {
                 ])
               })
             ],
-            2
+            1
           )
         ],
         1
@@ -1299,10 +1226,7 @@ var render = function() {
               }),
               _c(
                 "v-uni-view",
-                {
-                  staticClass: _vm._$g("4-" + $30, "sc"),
-                  attrs: { _i: "4-" + $30 }
-                },
+                { class: _vm._$g("4-" + $30, "c"), attrs: { _i: "4-" + $30 } },
                 [_vm._t("tip", null, { _i: "5-" + $30 })],
                 2
               )
@@ -1347,7 +1271,7 @@ var render = function() {
             },
             [
               _vm._t(
-                "leftStyle",
+                "right",
                 [
                   _c(
                     "v-uni-text",
@@ -1403,7 +1327,7 @@ __webpack_require__.r(__webpack_exports__);
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 
 {
-  props: ["data"],
+  props: ["data", "tip", "msgCon"],
   data: function data() {
     return {
       wxsProps: {} };
@@ -1458,7 +1382,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.member-list[data-v-0725c073] {\r\n  width: 95%;\r\n  background-color: pink;\n}\n.member-list .member[data-v-0725c073] {\r\n  height: 50px;\r\n  width: 100%;\r\n  margin-bottom: 16px;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.member-list .member .photo_tip[data-v-0725c073] {\r\n  position: relative;\r\n  width: 48px;\r\n  height: 48px;\r\n  background: #FFE431;\r\n  border-radius: 12px;\n}\n.member-list .member .photo_tip .tip[data-v-0725c073] {\r\n  position: absolute;\r\n  left: 34px;\r\n  top: -3px;\r\n  width: 18px;\r\n  height: 18px;\r\n  background: #FF5D5B;\r\n  border-radius: 50%;\r\n  line-height: 18px;\r\n  text-align: center;\r\n  color: white;\r\n  font-size: 10px;\n}\n.member-list .member .photo_tip uni-image[data-v-0725c073] {\r\n  width: 48px;\r\n  height: 48px;\r\n  border-radius: 10px;\n}\n.member-list .member .info[data-v-0725c073] {\r\n  flex: 2;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-indent: 20px;\n}\n.member-list .member .info .name[data-v-0725c073] {\r\n  width: 70px;\r\n  height: 25px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 18px;\r\n  color: #272832;\r\n  letter-spacing: -0.62px;\r\n  font-weight: 400;\n}\n.member-list .member .info .message[data-v-0725c073] {\r\n  width: 200px;\r\n  height: 20px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 14px;\r\n  color: rgba(39, 40, 50, 0.6);\r\n  letter-spacing: -0.48px;\r\n  font-weight: 400;\r\n  overflow: hidden;\r\n  white-space: nowrap;\r\n  text-overflow: ellipsis;\n}\n.member-list .member .leftStyle[data-v-0725c073] {\r\n  height: 100%;\r\n  line-height: 50px;\r\n  flex: 1;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: row-reverse;\n}\n.member-list .member .leftStyle .time[data-v-0725c073] {\r\n  font-size: 12px;\r\n  color: rgba(39, 40, 50, 0.4);\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.member-list[data-v-0725c073] {\r\n  width: 95%;\n}\n.member-list .member[data-v-0725c073] {\r\n  height: 50px;\r\n  width: 100%;\r\n  margin-bottom: 16px;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.member-list .member[data-v-0725c073]:active {\r\n  background-color: #f3f4f6;\n}\n.member-list .member .photo_tip[data-v-0725c073] {\r\n  position: relative;\r\n  width: 48px;\r\n  height: 48px;\r\n  background: #FFE431;\r\n  border-radius: 12px;\n}\n.member-list .member .photo_tip .tip[data-v-0725c073] {\r\n  position: absolute;\r\n  left: 34px;\r\n  top: -3px;\r\n  width: 18px;\r\n  height: 18px;\r\n  background: #FF5D5B;\r\n  border-radius: 50%;\r\n  line-height: 18px;\r\n  text-align: center;\r\n  color: white;\r\n  font-size: 10px;\n}\n.member-list .member .photo_tip uni-image[data-v-0725c073] {\r\n  width: 48px;\r\n  height: 48px;\r\n  border-radius: 10px;\n}\n.member-list .member .info[data-v-0725c073] {\r\n  flex: 2;\r\n  display: flex;\r\n  flex-direction: column;\r\n  text-indent: 20px;\n}\n.member-list .member .info .name[data-v-0725c073] {\r\n  width: 70px;\r\n  height: 25px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 18px;\r\n  color: #272832;\r\n  letter-spacing: -0.62px;\r\n  font-weight: 400;\n}\n.member-list .member .info .message[data-v-0725c073] {\r\n  width: 200px;\r\n  height: 20px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 14px;\r\n  color: rgba(39, 40, 50, 0.6);\r\n  letter-spacing: -0.48px;\r\n  font-weight: 400;\r\n  overflow: hidden;\r\n  white-space: nowrap;\r\n  text-overflow: ellipsis;\n}\n.member-list .member .right[data-v-0725c073] {\r\n  height: 100%;\r\n  width: 140px;\r\n  line-height: 50px;\r\n  flex: 1;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: row-reverse;\n}\n.member-list .member .right .time[data-v-0725c073] {\r\n  font-size: 12px;\r\n  color: rgba(39, 40, 50, 0.4);\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -1510,7 +1434,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.content {\r\n  display: flex;\r\n  flex-direction: column;\n}\n.topBar .barLeft {\r\n  flex: 1;\n}\n.topBar .barLeft uni-image {\r\n  margin-top: 5px;\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 8px;\n}\n.topBar .barCenter {\r\n  flex: 2;\r\n  text-align: center;\n}\n.topBar .barCenter .logo {\r\n  margin-top: 10.5px;\r\n  width: 44px;\r\n  height: 21px;\n}\n.topBar .barRight {\r\n  flex: 1;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.topBar .barRight uni-image {\r\n  width: 30px;\r\n  height: 30px;\n}\n.main {\r\n  margin-top: 50px;\r\n  height: 100%;\r\n  overflow: scroll;\n}\n.main .apply {\r\n  width: 100%;\r\n  height: 48px;\r\n  word-wrap: inherit;\n}\n.main .friends {\r\n  width: 100%;\r\n  height: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin-top: 40px;\n}\n.main .friends .friend-list {\r\n  width: 95%;\r\n  margin-bottom: 16px;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.main .friends .friend-list:active {\r\n  background-color: #f3f4f6;\n}\n.main .friends .friend-list .photo_tip {\r\n  position: relative;\r\n  width: 48px;\r\n  height: 48px;\r\n  background: #FFE431;\r\n  border-radius: 12px;\n}\n.main .friends .friend-list .photo_tip uni-image {\r\n  width: 48px;\r\n  height: 48px;\r\n  background: #FFE431;\r\n  border-radius: 12px;\n}\n.main .friends .friend-list .photo_tip .tip {\r\n  position: absolute;\r\n  left: 34px;\r\n  top: -3px;\r\n  width: 18px;\r\n  height: 18px;\r\n  background: #FF5D5B;\r\n  border-radius: 50%;\r\n  line-height: 18px;\r\n  text-align: center;\r\n  color: white;\r\n  font-size: 10px;\n}\n.main .friends .friend-list .content {\r\n  flex: 1;\r\n  text-indent: 20px;\n}\n.main .friends .friend-list .content .name {\r\n  width: 70px;\r\n  height: 25px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 18px;\r\n  color: #272832;\r\n  letter-spacing: -0.62px;\r\n  font-weight: 400;\n}\n.main .friends .friend-list .content .message {\r\n  width: 200px;\r\n  height: 20px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 14px;\r\n  color: rgba(39, 40, 50, 0.6);\r\n  letter-spacing: -0.48px;\r\n  font-weight: 400;\r\n  overflow: hidden;\r\n  white-space: nowrap;\r\n  text-overflow: ellipsis;\n}\n.main .friends .friend-list .time {\r\n  text-align: right;\r\n  width: 46px;\r\n  height: 17px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 12px;\r\n  color: rgba(39, 40, 50, 0.4);\r\n  letter-spacing: -0.41px;\r\n  font-weight: 400;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.content {\r\n  display: flex;\r\n  flex-direction: column;\n}\n.topBar .barLeft {\r\n  flex: 1;\n}\n.topBar .barLeft uni-image {\r\n  margin-top: 5px;\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 8px;\n}\n.topBar .barCenter {\r\n  flex: 2;\r\n  text-align: center;\n}\n.topBar .barCenter .logo {\r\n  margin-top: 10.5px;\r\n  width: 44px;\r\n  height: 21px;\n}\n.topBar .barRight {\r\n  flex: 1;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.topBar .barRight uni-image {\r\n  width: 30px;\r\n  height: 30px;\n}\n.main {\r\n  margin-top: 50px;\r\n  height: 100%;\r\n  overflow: scroll;\n}\n.main .apply {\r\n  width: 100%;\r\n  height: 48px;\r\n  word-wrap: inherit;\n}\n.main .friends {\r\n  width: 100%;\r\n  height: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  margin-top: 50px;\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -1672,87 +1596,82 @@ var render = function() {
                     [_vm._v("用户")]
                   )
                 : _vm._e(),
-              _c(
-                "v-uni-view",
-                { staticClass: _vm._$g(11, "sc"), attrs: { _i: 11 } },
-                _vm._l(_vm._$g(12, "f"), function(item, index, $20, $30) {
-                  return _c(
-                    "v-uni-view",
-                    {
-                      key: item,
-                      staticClass: _vm._$g("12-" + $30, "sc"),
-                      attrs: { _i: "12-" + $30 }
-                    },
-                    [
-                      _c("v-uni-image", {
-                        attrs: {
-                          src: _vm._$g("13-" + $30, "a-src"),
-                          mode: "",
-                          _i: "13-" + $30
-                        }
-                      }),
-                      _c(
-                        "v-uni-view",
-                        {
-                          staticClass: _vm._$g("14-" + $30, "sc"),
-                          attrs: { _i: "14-" + $30 }
-                        },
-                        [
-                          _c("v-uni-text", {
-                            staticClass: _vm._$g("15-" + $30, "sc"),
-                            attrs: { _i: "15-" + $30 },
-                            domProps: {
-                              innerHTML: _vm._s(_vm._$g("15-" + $30, "v-html"))
-                            }
-                          }),
-                          _c("v-uni-text", {
-                            staticClass: _vm._$g("16-" + $30, "sc"),
-                            attrs: { _i: "16-" + $30 },
-                            domProps: {
-                              innerHTML: _vm._s(_vm._$g("16-" + $30, "v-html"))
-                            }
-                          })
-                        ],
-                        1
-                      ),
-                      _vm._$g("17-" + $30, "i")
-                        ? _c(
-                            "v-uni-text",
-                            {
-                              staticClass: _vm._$g("17-" + $30, "sc"),
-                              attrs: { _i: "17-" + $30 }
-                            },
-                            [_vm._v("发消息")]
-                          )
-                        : _c(
-                            "v-uni-text",
-                            {
-                              staticClass: _vm._$g("18-" + $30, "sc"),
-                              attrs: { _i: "18-" + $30 }
-                            },
-                            [_vm._v("加好友")]
-                          )
-                    ],
-                    1
-                  )
-                }),
-                1
-              )
+              _c("member", {
+                staticClass: _vm._$g(11, "sc"),
+                attrs: { _i: 11 },
+                scopedSlots: _vm._u([
+                  {
+                    key: "right",
+                    fn: function(ref, _svm, _si) {
+                      var item = ref.item
+                      return [
+                        _svm._$g("13-" + _si, "i")
+                          ? _c(
+                              "v-uni-text",
+                              {
+                                staticClass: _svm._$g("13-" + _si, "sc"),
+                                attrs: { _i: "13-" + _si }
+                              },
+                              [_vm._v("发消息")]
+                            )
+                          : _c(
+                              "v-uni-text",
+                              {
+                                staticClass: _svm._$g(14, "sc"),
+                                attrs: { _i: 14 }
+                              },
+                              [_vm._v("加好友")]
+                            )
+                      ]
+                    }
+                  }
+                ])
+              })
             ],
             1
           ),
           _c(
             "v-uni-view",
-            { staticClass: _vm._$g(19, "sc"), attrs: { _i: 19 } },
+            { staticClass: _vm._$g(15, "sc"), attrs: { _i: 15 } },
             [
-              _vm._$g(20, "i")
+              _vm._$g(16, "i")
                 ? _c(
                     "v-uni-text",
-                    { staticClass: _vm._$g(20, "sc"), attrs: { _i: 20 } },
+                    { staticClass: _vm._$g(16, "sc"), attrs: { _i: 16 } },
                     [_vm._v("群组")]
                   )
                 : _vm._e(),
-              _c("user-notice", { attrs: { _i: 21 } })
+              _c("member", {
+                staticClass: _vm._$g(17, "sc"),
+                attrs: { _i: 17 },
+                scopedSlots: _vm._u([
+                  {
+                    key: "right",
+                    fn: function(ref, _svm, _si) {
+                      var item = ref.item
+                      return [
+                        _svm._$g("19-" + _si, "i")
+                          ? _c(
+                              "v-uni-text",
+                              {
+                                staticClass: _svm._$g("19-" + _si, "sc"),
+                                attrs: { _i: "19-" + _si }
+                              },
+                              [_vm._v("发消息")]
+                            )
+                          : _c(
+                              "v-uni-text",
+                              {
+                                staticClass: _svm._$g(20, "sc"),
+                                attrs: { _i: 20 }
+                              },
+                              [_vm._v("加好友")]
+                            )
+                      ]
+                    }
+                  }
+                ])
+              })
             ],
             1
           )
@@ -1854,7 +1773,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.search {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.search .searchBar .search_left {\r\n  position: relative;\r\n  width: 300px;\r\n  height: 30px;\r\n  background: #F3F4F6;\r\n  border-radius: 5px;\r\n  margin-left: 10px;\n}\n.search .searchBar .search_left uni-input {\r\n  height: 30px;\r\n  width: 275px;\r\n  text-align: left;\r\n  text-indent: 10px;\n}\n.search .searchBar .search_left uni-image {\r\n  position: absolute;\r\n  width: 20px;\r\n  height: 20px;\r\n  top: 5px;\r\n  right: 5px;\n}\n.search .searchBar .search_right {\r\n  margin-right: 30px;\r\n  line-height: 30px;\n}\n.search .main {\r\n  margin-top: 100px;\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.search .main .users,\r\n.search .main .groups {\r\n  width: 95%;\r\n  display: flex;\r\n  justify-content: center;\r\n  flex-direction: column;\n}\n.search .main .users .tit,\r\n.search .main .groups .tit {\r\n  width: 43px;\r\n  height: 30px;\r\n  font-family: PingFangSC-Semibold;\r\n  font-size: 22px;\r\n  color: #272832;\r\n  letter-spacing: -0.75px;\r\n  font-weight: 700;\n}\n.search .main .users .member-list .member,\r\n.search .main .groups .member-list .member {\r\n  margin-top: 15px;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  width: 100%;\n}\n.search .main .users .member-list .member uni-image,\r\n.search .main .groups .member-list .member uni-image {\r\n  width: 45px;\r\n  height: 45px;\r\n  border-radius: 10px;\n}\n.search .main .users .member-list .member uni-view,\r\n.search .main .groups .member-list .member uni-view {\r\n  width: 60%;\r\n  height: 25px;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  line-height: 25px;\r\n  font-weight: 400;\n}\n.search .main .users .member-list .member uni-view .name,\r\n.search .main .groups .member-list .member uni-view .name {\r\n  font-size: 18px;\n}\n.search .main .users .member-list .member uni-view .email,\r\n.search .main .groups .member-list .member uni-view .email {\r\n  font-size: 12px;\n}\n.search .main .users .member-list .member .sendBtn,\r\n.search .main .groups .member-list .member .sendBtn {\r\n  width: 70px;\r\n  height: 30px;\r\n  text-align: center;\r\n  line-height: 30px;\r\n  border-radius: 12px;\r\n  color: #000000;\r\n  background-color: #FFE431;\n}\n.search .main .users .member-list .member .addBtn,\r\n.search .main .groups .member-list .member .addBtn {\r\n  width: 70px;\r\n  height: 30px;\r\n  text-align: center;\r\n  line-height: 30px;\r\n  border-radius: 12px;\r\n  color: #4AAAFF;\r\n  background-color: rgba(74, 170, 255, 0.1);\n}\n.search .main .groups {\r\n  margin-top: 20px;\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.search {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.search .searchBar .search_left {\r\n  position: relative;\r\n  width: 300px;\r\n  height: 30px;\r\n  background: #F3F4F6;\r\n  border-radius: 5px;\r\n  margin-left: 10px;\n}\n.search .searchBar .search_left uni-input {\r\n  height: 30px;\r\n  width: 275px;\r\n  text-align: left;\r\n  text-indent: 10px;\n}\n.search .searchBar .search_left uni-image {\r\n  position: absolute;\r\n  width: 20px;\r\n  height: 20px;\r\n  top: 5px;\r\n  right: 5px;\n}\n.search .searchBar .search_right {\r\n  margin-right: 30px;\r\n  line-height: 30px;\n}\n.search .main {\r\n  margin-top: 80px;\r\n  width: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\n}\n.search .main .users,\r\n.search .main .groups {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  text-align: left;\n}\n.search .main .users .tit,\r\n.search .main .groups .tit {\r\n  position: relative;\r\n  left: 0;\r\n  width: 43px;\r\n  height: 30px;\r\n  font-family: PingFangSC-Semibold;\r\n  font-size: 22px;\r\n  color: #272832;\r\n  letter-spacing: -0.75px;\r\n  font-weight: 700;\r\n  padding-bottom: 10px;\n}\n.search .main .users .mumber .sendBtn,\r\n.search .main .groups .mumber .sendBtn {\r\n  width: 70px;\r\n  height: 30px;\r\n  text-align: center;\r\n  line-height: 30px;\r\n  border-radius: 12px;\r\n  color: #000000;\r\n  background-color: #FFE431;\n}\n.search .main .users .mumber .addBtn,\r\n.search .main .groups .mumber .addBtn {\r\n  width: 70px;\r\n  height: 30px;\r\n  text-align: center;\r\n  line-height: 30px;\r\n  border-radius: 12px;\r\n  color: #4AAAFF;\r\n  background-color: rgba(74, 170, 255, 0.1);\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

@@ -16,21 +16,21 @@
 		<view class="main">
 			<view class="users">
 				<text class="tit" v-if="userArr.length>0">用户</text>
-				<view class="member-list">
-					<view class="member" v-for="(item,index) in userArr" :key="index">
-						<image :src="item.imgUrl" mode=""></image>
-						<view class="info">
-							<text class="name" v-html="item.name"></text>
-							<text class="email" v-html="item.email"></text>
-						</view>
+				<member :data="userArr" class="mumber">
+					<template #right="{item}">
 						<text class="sendBtn" v-if="item.tip===1">发消息</text>
 						<text class="addBtn" v-else>加好友</text>
-					</view>
-				</view>
+					</template>
+				</member>
 			</view>
 			<view class="groups">
 				<text class="tit" v-if="groupsArr.length>0">群组</text>
-				<user-notice :data="groupsArr"></user-notice>
+				<member :data="userArr" class="mumber" msgCon="email">
+					<template #right="{item}">
+						<text class="sendBtn" v-if="item.tip===1">发消息</text>
+						<text class="addBtn" v-else>加好友</text>
+					</template>
+				</member>
 			</view>
 		</view>
 	</view>
@@ -48,16 +48,20 @@
 		data() {
 			return {
 				userArr: [],
-				groupsArr:[]
+				groupsArr: [],
+				data: []
 			};
 		},
 		onLoad() {
-
+			this.data = datas.searchData();
+			this.data.forEach(item => {
+				item.imgUrl = '../../static/images/index/' + item.imgUrl;
+			})
 		},
 		methods: {
-			back(){
+			back() {
 				uni.navigateBack({
-					datel:1
+					datel: 1
 				})
 			},
 			// 关键词获取
@@ -77,6 +81,7 @@
 						item.name = item.name.replace(valExp, `<span style="color:#4AAAFF">${value}</span>`)
 						item.email = item.email.replace(valExp, `<span style="color:#4AAAFF">${value}</span>`)
 						this.userArr.push(item)
+						this.groupsArr.push(item)
 					}
 				})
 				console.log(this.userArr);
@@ -90,7 +95,7 @@
 						tip = 1;
 					}
 				});
-				friend.tip=tip;
+				friend.tip = tip;
 				console.log(friend.tip);
 			}
 		}
@@ -136,7 +141,7 @@
 		}
 
 		.main {
-			margin-top: 100px;
+			margin-top: 80px;
 			width: 100%;
 			display: flex;
 			flex-direction: column;
@@ -145,12 +150,14 @@
 
 			.users,
 			.groups {
-				width: 95%;
 				display: flex;
 				justify-content: center;
+				align-items: center;
 				flex-direction: column;
-
+				text-align: left;
 				.tit {
+					position: relative;
+					left: 0;
 					width: 43px;
 					height: 30px;
 					font-family: PingFangSC-Semibold;
@@ -158,67 +165,31 @@
 					color: #272832;
 					letter-spacing: -0.75px;
 					font-weight: 700;
+					padding-bottom: 10px;
 				}
 
-				.member-list {
-					.member {
-						margin-top: 15px;
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-						width: 100%;
+				.mumber {
+					.sendBtn {
+						width: 70px;
+						height: 30px;
+						text-align: center;
+						line-height: 30px;
+						border-radius: 12px;
+						color: #000000;
+						background-color: #FFE431;
+					}
 
-						image {
-							width: 45px;
-							height: 45px;
-							border-radius: 10px;
-						}
-
-						view {
-							width: 60%;
-							height: 25px;
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							line-height: 25px;
-							font-weight: 400;
-
-							.name {
-								font-size: 18px;
-							}
-
-							.email {
-								font-size: 12px;
-							}
-						}
-
-						.sendBtn {
-							width: 70px;
-							height: 30px;
-							text-align: center;
-							line-height: 30px;
-							border-radius: 12px;
-							color: #000000;
-							background-color: #FFE431;
-						}
-
-						.addBtn {
-							width: 70px;
-							height: 30px;
-							text-align: center;
-							line-height: 30px;
-							border-radius: 12px;
-							color: #4AAAFF;
-							background-color: rgba(74, 170, 255, 0.10);
-							;
-						}
-
+					.addBtn {
+						width: 70px;
+						height: 30px;
+						text-align: center;
+						line-height: 30px;
+						border-radius: 12px;
+						color: #4AAAFF;
+						background-color: rgba(74, 170, 255, 0.10);
+						;
 					}
 				}
-			}
-
-			.groups {
-				margin-top: 20px;
 			}
 		}
 	}

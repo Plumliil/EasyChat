@@ -1,5 +1,5 @@
 <template>
-	<view class="simple">
+	<view class="detail">
 		<top-bar class="topBar">
 			<template #left>
 				<image class="back" src="../../static/images/commons/toLeft.png" mode=""></image>
@@ -70,7 +70,7 @@
 		}
 	}
 
-	.simple {
+	.detail {
 		.topBar {
 			.back {
 				width: 26px;

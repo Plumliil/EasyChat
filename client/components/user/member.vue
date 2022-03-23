@@ -4,18 +4,18 @@
 		<view class="member" v-for="(item,index) in data" :key="index">
 			<view class="photo_tip">
 				<image :src="item.imgUrl" mode=""></image>
-				<view class="tip">
+				<view :class="[{tip:tip}]">
 					<slot name="tip" :item="item"></slot>
 				</view>
 			</view>
 			<view class="info">
 				<slot name="content">
 					<text class="title" v-html="item.name"></text>
-					<text class="message" v-html="item.email"></text>
+					<text class="message" v-html="item[msgCon]"></text>
 				</slot>
 			</view>
-			<view class="leftStyle">
-				<slot name="leftStyle" :item="item">
+			<view class="right">
+				<slot name="right" :item="item">
 					<text class="time">{{item.time}}</text>
 				</slot>
 			</view>
@@ -30,6 +30,14 @@
 			data: {
 				type: Array,
 				required: true
+			},
+			tip:{
+				type:Boolean,
+				default:false
+			},
+			msgCon:{
+				type:String,
+				default:'email'
 			}
 		},
 		data() {
@@ -39,21 +47,15 @@
 		},
 		onLoad() {
 			console.log(data);
-		}
+		},
 	}
 </script>
 
 <style lang="scss">
 	.member-list {
 		width: 95%;
-		background-color: pink;
 
 		.member {
-			// margin-top: 15px;
-			// display: flex;
-			// justify-content: space-between;
-			// align-items: center;
-			// width: 100%;
 			height: 50px;
 			width: 100%;
 			margin-bottom: 16px;
@@ -61,6 +63,9 @@
 			justify-content: center;
 			align-items: center;
 
+			&:active {
+				background-color: $uni-bg-color-grey;
+			}
 
 			.photo_tip {
 				position: relative;
@@ -119,19 +124,23 @@
 					text-overflow: ellipsis;
 				}
 			}
-			.leftStyle{
+
+			.right {
 				height: 100%;
+				width: 140px;
 				line-height: 50px;
 				flex: 1;
 				display: flex;
 				align-items: center;
 				flex-direction: row-reverse;
+
 				.time {
 					font-size: 12px;
 					color: rgba(39, 40, 50, 0.40);
 				}
-				
+
 			}
+
 			// .sendBtn {
 			// 	width: 80px;
 			// 	height: 30px;

@@ -23,27 +23,12 @@
 				申请申请申请申请申请申请申请申请申请申请申请申请申请申请申请申请
 			</view> -->
 			<view class="friends">
-				<view class="friend-list" v-for="friend in friends">
-					<view class="photo_tip">
-						<image :src="friend.imgUrl" mode="" class="photo"></image>
-						<text class="tip">{{friend.tip}}</text>
-					</view>
-					<view class="content">
-						<text class="name">{{friend.name}}</text>
-						<text class="message">{{friend.message}}</text>
-					</view>
-					<text class="time">{{friend.time}}</text>
-				</view>
-				<member :data="friends">
+				<member :data="friends" tip msgCon="message">
 					<template #tip="{item}">
 						<text>{{item.tip}}</text>
 					</template>
 				</member>
 			</view>
-
-			<!-- <member :data="friends" >
-			 
-		 </member> -->
 		</view>
 	</view>
 </template>
@@ -145,88 +130,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			margin-top: 40px;
-			// overflow: scroll;
-
-			.friend-list {
-				width: 95%;
-				margin-bottom: 16px;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				&:active {
-					background-color: $uni-bg-color-grey;
-				}
-
-				.photo_tip {
-					position: relative;
-					width: 48px;
-					height: 48px;
-					background: #FFE431;
-					border-radius: 12px;
-
-					image {
-						width: 48px;
-						height: 48px;
-						background: #FFE431;
-						border-radius: 12px;
-					}
-
-					.tip {
-						position: absolute;
-						left: 34px;
-						top: -3px;
-						width: 18px;
-						height: 18px;
-						background: #FF5D5B;
-						border-radius: 50%;
-						line-height: 18px;
-						text-align: center;
-						color: white;
-						font-size: 10px;
-					}
-				}
-
-				.content {
-					flex: 1;
-					text-indent: 20px;
-
-					.name {
-						width: 70px;
-						height: 25px;
-						font-family: PingFangSC-Regular;
-						font-size: 18px;
-						color: #272832;
-						letter-spacing: -0.62px;
-						font-weight: 400;
-					}
-
-					.message {
-						width: 200px;
-						height: 20px;
-						font-family: PingFangSC-Regular;
-						font-size: 14px;
-						color: rgba(39, 40, 50, 0.60);
-						letter-spacing: -0.48px;
-						font-weight: 400;
-						overflow: hidden;
-						white-space: nowrap;
-						text-overflow: ellipsis;
-					}
-				}
-
-				.time {
-					text-align: right;
-					width: 46px;
-					height: 17px;
-					font-family: PingFangSC-Regular;
-					font-size: 12px;
-					color: rgba(39, 40, 50, 0.40);
-					letter-spacing: -0.41px;
-					font-weight: 400;
-				}
-			}
+			margin-top: 50px;
 		}
 	}
 </style>
