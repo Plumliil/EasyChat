@@ -2,13 +2,13 @@
 	<!-- <view class="member"> -->
 	<view class="member-list">
 		<view class="member" v-for="(item,index) in data" :key="index">
-			<view class="photo_tip">
+			<view class="photo_tip" @click="toDetail(item)">
 				<image :src="item.imgUrl" mode=""></image>
 				<view :class="[{tip:tip}]">
 					<slot name="tip" :item="item"></slot>
 				</view>
 			</view>
-			<view class="info">
+			<view class="info" @click="toChat(item)">
 				<slot name="content">
 					<text class="title" v-html="item.name"></text>
 					<text class="message" v-html="item[msgCon]"></text>
@@ -48,6 +48,17 @@
 		onLoad() {
 			console.log(data);
 		},
+		methods:{
+			toDetail(item){
+				console.log(item);
+				uni.navigateTo({
+					url:`../../pages/user/detail?id=${item.id}`,
+				})
+			},
+			toChat(){
+				console.log('chat');
+			}
+		}
 	}
 </script>
 

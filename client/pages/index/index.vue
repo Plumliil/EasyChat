@@ -3,7 +3,7 @@
 		<top-bar class="topBar">
 			<template #left>
 				<view class="barLeft">
-					<image src="../../static/images/index/p4.jpeg" mode=""></image>
+					<image @click="toHome" src="../../static/images/index/p4.jpeg" mode=""></image>
 				</view>
 			</template>
 			<template #center>
@@ -53,6 +53,11 @@
 			this.getFriends();
 		},
 		methods: {
+			toHome(){
+				uni.navigateTo({
+					url:'../user/home'
+				})
+			},
 			toSearch() {
 				uni.navigateTo({
 					url: '../search/search'

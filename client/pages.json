@@ -6,27 +6,38 @@
 				"navigationStyle": "custom"
 			}
 		},
-		// {
-		// 	"path": "pages/signin/signin",
-		// 	"style": {
-		// 		"navigationStyle": "custom"
-		// 	}
-		// },
-		// {
-		// 	"path": "pages/signup/signup",
-		// 	"style": {
-		// 		"navigationStyle": "custom"
-		// 	}
-		// }
-		// ,
+		{
+			"path": "pages/signin/signin",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/signup/signup",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
 		{
 			"path": "pages/search/search",
 			"style": {
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/user/detail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/user/home",
+			"style": {
+				"navigationStyle": "custom"
+			}
 		}
 		// {
-		// 	"path": "pages/details/simple",
+		// 	"path": "pages/user/home",
 		// 	"style": {
 		// 		"navigationStyle": "custom"
 		// 	}
