@@ -15,14 +15,14 @@
 				<view class="item">
 					<view class="item-left"><text>头像</text></view>
 					<view class="item-cen">
-						<!-- <image src=".. /../static/images/index/p2.jpeg" mode="">
-						</image> -->
+						<image v-if="!cropFilePath" src=".. /../static/images/index/p2.jpeg" mode=""></image>
 						<image-cropper :src="tempFilePath" @confirm="confirm" @cancel="cancel"></image-cropper>
-						<image :src="cropFilePath" @tap="upload" class="meslist_img"></image>
+						<image :src="cropFilePath" class="meslist_img"></image>
+						<view>
+						</view>
 					</view>
 					<view class="toRight">
-						<image src=".. /../static/images/commons/toRight.png" mode="">
-						</image>
+						<image @tap="upload" src=".. /../static/images/commons/toRight.png" mode=""></image>
 					</view>
 				</view>
 				<view class="item">
@@ -30,7 +30,7 @@
 					<view class="item-cen">
 						<text>{{userInfo.uname}}</text>
 					</view>
-					<view class="toRight" @click="modifyMe('签名',userInfo.uname)">
+					<view class="toRight" @click="modifyMe('签名',userInfo.uname,'uname')">
 						<image src=".. /../static/images/commons/toRight.png" mode="">
 						</image>
 					</view>
@@ -87,9 +87,9 @@
 				<view class="item">
 					<view class="item-left"><text>密码</text></view>
 					<view class="item-cen">
-						<text>*******</text>
+						<text>{{userInfo.password}}</text>
 					</view>
-					<view class="toRight">
+					<view class="toRight" @click="modifyMe('密码',userInfo.password,'password')">
 						<image src=".. /../static/images/commons/toRight.png" mode="">
 						</image>
 					</view>
@@ -97,7 +97,7 @@
 
 			</view>
 		</view>
-		<modify :isModify="isModify" :modifyDate="modifyDate" @cancel="cancelModify" @define="defineModify">
+		<modify :isModify="isModify" :modifyData="modifyData" @cancel="cancelModify" @define="defineModify">
 
 		</modify>
 		<bottom-bar class="bottomBar">
@@ -125,25 +125,25 @@
 				format: true
 			})
 			return {
-				userInfo:{
-					img:'',
-					uname:'wazsaaaaaaaaaaaaaaaaaaaaaaaa',
-					name:'ls',
-					registe:new Date(),
-					sex:'男',
-					birthday:'2001-06-21',
-					email:'xxxx@tt.com',
-					tel:'1221331241',
-					password:'*********'
+				userInfo: {
+					img: '',
+					uname: 'wazsaaaaaaaaaaaaaaaaaaaaaaaa',
+					name: 'ls',
+					registe: new Date(),
+					sex: '男',
+					birthday: '2001-06-21',
+					email: 'xxxx@tt.com',
+					tel: '1221331241',
+					password: '*********'
 				},
 				sexArr: ['男', '女', '未知'],
 				index: 0,
 				date: currentDate,
 				// 图片剪裁
 				tempFilePath: "",
-				cropFilePath: ".. /../static/images/index/p2.jpeg",
+				cropFilePath: "",
 				// 修改
-				modifyDate: '',
+				modifyData: {},
 				isModify: false,
 				// modTitle:'',
 				// modDate:''
@@ -199,7 +199,7 @@
 				this.tempFilePath = "";
 				// 图片地址
 				this.cropFilePath = e.detail.tempFilePath;
-
+				this.userInfo.img=this.cropFilePath;
 				// #ifdef APP-PLUS||MP
 				//除了H5端返回base64数据外，其他端都是返回临时地址，所以你要判断base64还是临时文件名，（用条件编译APP-PLUS||MP执行编译。）
 				//按我这里是先上传裁剪得来的临时文件地址然后得到临时文件名，
@@ -228,13 +228,11 @@
 				this.tempFilePath = "";
 			},
 			// 修改
-			modifyMe(title,date,type) {
-				// this.modTitle=title;
-				// this.modDate=date;
-				this.modifyDate={
-					type:type,
-					title:title,
-					date:date
+			modifyMe(title, value, type) {
+				this.modifyData = {
+					type,
+					title,
+					value
 				}
 				this.isModify = true;
 			},
@@ -242,8 +240,9 @@
 				this.isModify = false;
 
 			},
-			defineModify(data,type) {
+			defineModify(data) {
 				this.isModify = false;
+				this.userInfo[data.type] = data.value;
 				console.log(data);
 			}
 		}

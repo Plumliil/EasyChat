@@ -2,32 +2,42 @@
 	<view :class="[{modify:true},{modifyAppear:!isModify}]">
 		<view class="modify-header">
 			<view class="close" @click="cancelModify">取消</view>
-			<view class="title" @click="cm">{{modifyDate.title}}</view>
+			<view class="title" @click="cm">{{modifyData.title}}</view>
 			<view class="define" @click="defineModify">确定</view>
+		</view>
+		<view class="modify-old" :class="[{psdValid:modifyData.type==='password'}]">
+			<text v-if="modifyData.type!=='password'">{{modifyData.value}}</text>
+			<view v-else>
+				<input type="text" value="" v-model="iptPsd" placeholder="请输入原密码..." />
+			</view>
 		</view>
 		<view class="modify-con">
 			<textarea v-model="changedData" placeholder="填入新的内容..." />
-		</view>
-		<view class="modify-old">
-			<text>{{modifyDate.date}}</text>
 		</view>
 	</view>
 </template>
 
 <script>
 	export default {
-		props: [
-			'isModify',
-			'modifyDate'
-		],
+		props: {
+			isModify: {
+				type: Boolean,
+				required: true
+			},
+			modifyData: {
+				type: Object,
+				required: true
+			}
+		},
 		data() {
 			return {
-				changedData: ''
+				changedData: '',
+				iptPsd: ''
 			}
 		},
 		onLoad() {
 			console.log(prop);
-			this.changedData = this.modifyDate.date
+			this.changedData = this.modifyData.value
 		},
 		methods: {
 			cancelModify() {
@@ -35,10 +45,21 @@
 
 			},
 			defineModify() {
-				this.$emit('define', this.changedData)
+				if (this.iptPsd !== this.modifyData.value) {
+					return uni.showModal({
+						content: '输入原密码不符,无法修改',
+						showCancel: false
+					});
+				}
+				let data = {
+					value: this.changedData === '' ? this.modifyData.value : this.changedData,
+					type: this.modifyData.type
+				}
+				this.$emit('define', data);
+				this.changedData = '';
 			},
 			cm() {
-				console.log(this);
+				console.log(this.modifyData);
 			}
 		}
 	}
@@ -122,6 +143,25 @@
 			margin-top: 50px;
 			text-indent: 20px;
 			line-height: 2;
+		}
+
+		.psdValid {
+			width: 343px;
+			height: 50px;
+			background: #F3F4F6;
+			border-radius: 10px;
+			margin: auto;
+			margin-top: 50px;
+			text-indent: 20px;
+			line-height: 2;
+
+			view {
+				input {
+					height: 50px;
+					border-radius: 10px;
+					border: 1px solid black;
+				}
+			}
 		}
 	}
 
