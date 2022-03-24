@@ -55,7 +55,10 @@
 					url:`../../pages/user/detail?id=${item.id}`,
 				})
 			},
-			toChat(){
+			toChat(item){
+				uni.navigateTo({
+					url:`../../pages/chatRoom/chatRoom?id=${item.id}`,
+				})
 				console.log('chat');
 			}
 		}

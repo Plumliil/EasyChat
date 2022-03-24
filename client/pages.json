@@ -35,22 +35,22 @@
 		// 	"style": {
 		// 		"navigationStyle": "custom"
 		// 	}
-		// }
+		// }, 
 		// {
-		// 	"path": "pages/user/home",
+		// 	"path": "pages/requests/requests",
 		// 	"style": {
 		// 		"navigationStyle": "custom"
 		// 	}
-		// }
-	    {
-            "path" : "pages/requests/requests",
-            "style" :                                                                                    
-            {
-                "navigationStyle": "custom"
-            }
-            
-        }
-    ],
+
+		// },
+		{
+			"path": "pages/chatRoom/chatRoom",
+			"style": {
+				"navigationStyle": "custom"
+			}
+
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "EasyChat",

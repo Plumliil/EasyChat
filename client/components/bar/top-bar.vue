@@ -26,8 +26,6 @@
 		height: 44px;
 		
 		background: #ffffff;
-		padding-right: $uni-spacing-col-base;
-		padding-left: $uni-spacing-col-base;
 		padding-top: var(--status-bar-height);
 		padding-bottom: 5px;
 		border-bottom: 1px solid #F8F8FF;
