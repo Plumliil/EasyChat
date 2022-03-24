@@ -3,7 +3,7 @@
 		<top-bar class="topBar">
 			<template #left>
 				<!-- <view></view> -->
-				<image class="back" src="../../static/images/commons/toLeft.png" mode=""></image>
+				<image class="back" src="../../static/images/commons/toLeft.png" mode="" @click="back"></image>
 			</template>
 			<template #center>
 				<view class="tit">好友请求</view>
@@ -38,7 +38,8 @@
 				<view class="msg">
 					<text>该邮箱还未注册，输入密码成为新账号该邮箱还未注册，输入密码成为新账号该邮箱还未注册，输入密码成为新账号该邮箱还未注册，输入密码成为新账号</text>
 				</view>
-			</view>	<view class="request">
+			</view>
+			<view class="request">
 				<image src="../../static/images/index/p2.jpeg" mode=""></image>
 				<view class="btns">
 					<button class="reject" type="default">拒绝</button>
@@ -51,7 +52,8 @@
 				<view class="msg">
 					<text>该邮箱还未注册，输入密码成为新账号该邮箱还未注册，输入密码成为新账号该邮箱还未注册，输入密码成为新账号该邮箱还未注册，输入密码成为新账号</text>
 				</view>
-			</view>	<view class="request">
+			</view>
+			<view class="request">
 				<image src="../../static/images/index/p2.jpeg" mode=""></image>
 				<view class="btns">
 					<button class="reject" type="default">拒绝</button>
@@ -82,7 +84,11 @@
 			};
 		},
 		methods: {
-
+			back() {
+				uni.navigateBack({
+					delta:1
+				})
+			}
 		}
 	}
 </script>
@@ -124,6 +130,7 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
 			.request {
 				width: 98%;
 				height: 170px;
