@@ -175,8 +175,65 @@ function isFriend(){
 	]
 	return isFriend
 }
+
+function chatMsg(){
+	let msgs=[
+		{
+			id:'a',
+			imgUrl:'p1.jpeg',
+			message:'uni.scss文件',
+			types:0,
+			time:new Date()-1000,
+			tip:0
+		},{
+			id:'a',
+			imgUrl:'p1.jpeg',
+			message:'logo.png',
+			types:1,
+			time:new Date()-1000*16,
+			tip:1
+		},{
+			id:'b',
+			imgUrl:'p2.jpeg',
+			message:'uni.scss文件的用途是为了方便整体控制应用的风格。',
+			types:0,
+			time:new Date()-1000*60,
+			tip:2
+		},{
+			id:'a',
+			imgUrl:'p1.jpeg',
+			message:'xp.jpg',
+			types:1,
+			time:new Date()-1000*60*5,
+			tip:3
+		},{
+			id:'b',
+			imgUrl:'p2.jpeg',
+			message:'uni.scss文件',
+			types:0,
+			time:new Date()-1000*60*15,
+			tip:4
+		},{
+			id:'a',
+			imgUrl:'p1.jpeg',
+			message:'uni.scss文件的用途是为了方便整体控制应用的风格。',
+			types:0,
+			time:new Date()-1000*60*60,
+			tip:5
+		},{
+			id:'a',
+			imgUrl:'p1.jpeg',
+			message:'uni.scss文件的用途是为了方便整体控制应用的风格。',
+			types:0,
+			time:new Date()-1000*60*60*15,
+			tip:6
+		},
+	];
+	return msgs;
+}
 module.exports = {
 	friends,
 	searchData,
-	isFriend
+	isFriend,
+	chatMsg
 }
