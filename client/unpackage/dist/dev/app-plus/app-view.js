@@ -1424,6 +1424,110 @@ var render = function() {
                 }),
                 1
               )
+            : _vm._e(),
+          _vm._$g(13, "i")
+            ? _c(
+                "v-uni-view",
+                { staticClass: _vm._$g(13, "sc"), attrs: { _i: 13 } },
+                [
+                  _c(
+                    "v-uni-view",
+                    {
+                      staticClass: _vm._$g(14, "sc"),
+                      attrs: { _i: 14 },
+                      on: {
+                        click: function($event) {
+                          return _vm.$handleViewEvent($event)
+                        }
+                      }
+                    },
+                    [
+                      _c("v-uni-image", {
+                        attrs: { src: _vm._$g(15, "a-src"), mode: "", _i: 15 }
+                      }),
+                      _c("v-uni-text", { attrs: { _i: 16 } }, [_vm._v("照片")])
+                    ],
+                    1
+                  ),
+                  _c(
+                    "v-uni-view",
+                    {
+                      staticClass: _vm._$g(17, "sc"),
+                      attrs: { _i: 17 },
+                      on: {
+                        click: function($event) {
+                          return _vm.$handleViewEvent($event)
+                        }
+                      }
+                    },
+                    [
+                      _c("v-uni-image", {
+                        attrs: { src: _vm._$g(18, "a-src"), mode: "", _i: 18 }
+                      }),
+                      _c("v-uni-text", { attrs: { _i: 19 } }, [_vm._v("拍摄")])
+                    ],
+                    1
+                  ),
+                  _c(
+                    "v-uni-view",
+                    {
+                      staticClass: _vm._$g(20, "sc"),
+                      attrs: { _i: 20 },
+                      on: {
+                        click: function($event) {
+                          return _vm.$handleViewEvent($event)
+                        }
+                      }
+                    },
+                    [
+                      _c("v-uni-image", {
+                        attrs: { src: _vm._$g(21, "a-src"), mode: "", _i: 21 }
+                      }),
+                      _c("v-uni-text", { attrs: { _i: 22 } }, [_vm._v("位置")])
+                    ],
+                    1
+                  ),
+                  _c(
+                    "v-uni-view",
+                    {
+                      staticClass: _vm._$g(23, "sc"),
+                      attrs: { _i: 23 },
+                      on: {
+                        click: function($event) {
+                          return _vm.$handleViewEvent($event)
+                        }
+                      }
+                    },
+                    [
+                      _c("v-uni-image", {
+                        attrs: { src: _vm._$g(24, "a-src"), mode: "", _i: 24 }
+                      }),
+                      _c("v-uni-text", { attrs: { _i: 25 } }, [_vm._v("视频")])
+                    ],
+                    1
+                  ),
+                  _c(
+                    "v-uni-view",
+                    {
+                      staticClass: _vm._$g(26, "sc"),
+                      attrs: { _i: 26 },
+                      on: {
+                        click: function($event) {
+                          return _vm.$handleViewEvent($event)
+                        }
+                      }
+                    },
+                    [
+                      _c("v-uni-image", {
+                        attrs: { src: _vm._$g(27, "a-src"), mode: "", _i: 27 }
+                      }),
+                      _c("v-uni-text", { attrs: { _i: 28 } }, [_vm._v("文件")])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
             : _vm._e()
         ],
         1
@@ -1520,7 +1624,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.submit[data-v-2aae9544] {\r\n  width: 100%;\r\n  height: 240px;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  padding-top: 5px;\r\n  -webkit-transform: translateY(195px);\r\n          transform: translateY(195px);\r\n  transition: 1s;\n}\n.submit .main[data-v-2aae9544] {\r\n  display: flex;\r\n  width: 100%;\r\n  height: 40px;\r\n  background-color: white;\r\n  text-align: center;\r\n  line-height: 40px;\r\n  padding: 3px 0;\n}\n.submit .main uni-image[data-v-2aae9544] {\r\n  width: 30px;\r\n  height: 30px;\r\n  padding: 3px 3px;\r\n  margin: 0 3px;\n}\n.submit .main .voice[data-v-2aae9544] {\r\n  flex: .5;\r\n  padding: 0 3px;\n}\n.submit .main .message[data-v-2aae9544] {\r\n  flex: 4;\r\n  text-align: left;\r\n  font-size: 30px;\n}\n.submit .main .message uni-textarea[data-v-2aae9544] {\r\n  width: 100%;\r\n  height: 38px;\r\n  border: 1px solid gray;\r\n  line-height: 2.5;\n}\n.submit .main .fn[data-v-2aae9544] {\r\n  flex: 1.5;\n}\n.submit .other[data-v-2aae9544] {\r\n  width: 100%;\r\n  height: 200px;\r\n  background-color: pink;\n}\n.submit .other .emo[data-v-2aae9544] {\r\n  width: 90%;\r\n  height: 100%;\r\n  overflow-y: scroll;\r\n  margin: auto;\n}\n.submit .other .emo .emoji[data-v-2aae9544] {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  text-align: center;\r\n  justify-content: space-around;\r\n  align-items: center;\n}\n.submit .other .emo .emoji uni-view[data-v-2aae9544] {\r\n  width: 50px;\r\n  height: 50px;\r\n  font-size: 25px;\r\n  line-height: 50px;\n}\n.subTrans[data-v-2aae9544] {\r\n  transition: 1s;\r\n  -webkit-transform: translateY(0);\r\n          transform: translateY(0);\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.submit[data-v-2aae9544] {\r\n  width: 100%;\r\n  height: 270px;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  padding-top: 5px;\r\n  -webkit-transform: translateY(225px);\r\n          transform: translateY(225px);\r\n  background-color: #e8eaec;\r\n  transition: .3s;\r\n  z-index: 999;\n}\n.submit .main[data-v-2aae9544] {\r\n  display: flex;\r\n  width: 100%;\r\n  height: 40px;\r\n  background-color: white;\r\n  text-align: center;\r\n  line-height: 40px;\r\n  padding: 3px 0;\n}\n.submit .main uni-image[data-v-2aae9544] {\r\n  width: 30px;\r\n  height: 30px;\r\n  padding: 3px 3px;\r\n  margin: 0 3px;\n}\n.submit .main .voice[data-v-2aae9544] {\r\n  flex: .5;\r\n  padding: 0 3px;\n}\n.submit .main .message[data-v-2aae9544] {\r\n  flex: 4;\r\n  text-align: left;\r\n  font-size: 30px;\n}\n.submit .main .message uni-textarea[data-v-2aae9544] {\r\n  width: 100%;\r\n  height: 38px;\r\n  border: 1px solid gray;\r\n  line-height: 2.5;\n}\n.submit .main .fn[data-v-2aae9544] {\r\n  flex: 1.5;\n}\n.submit .other[data-v-2aae9544] {\r\n  width: 100%;\r\n  height: 200px;\n}\n.submit .other .emo[data-v-2aae9544] {\r\n  width: 90%;\r\n  height: 100%;\r\n  overflow-y: scroll;\r\n  margin: auto;\r\n  padding-top: 10px;\n}\n.submit .other .emo .emoji[data-v-2aae9544] {\r\n  width: 100%;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  text-align: center;\r\n  justify-content: space-around;\r\n  align-items: center;\n}\n.submit .other .emo .emoji uni-view[data-v-2aae9544] {\r\n  width: 50px;\r\n  height: 50px;\r\n  font-size: 25px;\r\n  line-height: 50px;\n}\n.submit .other .more[data-v-2aae9544] {\r\n  width: 90%;\r\n  height: 100%;\r\n  padding-top: 10px;\r\n  display: flex;\r\n  justify-content: space-around;\r\n  flex-wrap: wrap;\r\n  background-color: #e8eaec;\r\n  margin: auto;\r\n  transition: 1s;\n}\n.submit .other .more uni-view[data-v-2aae9544] {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 80px;\r\n  height: 80px;\r\n  margin-top: 3px;\n}\n.submit .other .more uni-view uni-text[data-v-2aae9544] {\r\n  font-size: 14px;\r\n  padding-top: 3px;\r\n  color: gray;\n}\n.submit .other .more uni-view uni-image[data-v-2aae9544] {\r\n  width: 40px;\r\n  height: 40px;\r\n  padding: 10px;\r\n  border-radius: 10px;\r\n  background-color: white;\n}\n.subTrans[data-v-2aae9544] {\r\n  transition: .5s;\r\n  -webkit-transform: translateY(0);\r\n          transform: translateY(0);\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -1572,7 +1676,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ 15);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.chatRoom[data-v-16f9f836] {\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: rgba(128, 128, 128, 0.1);\n}\n.chatRoom .topBar[data-v-16f9f836] {\r\n  display: flex;\r\n  justify-content: space-between;\n}\n.chatRoom .topBar .back[data-v-16f9f836] {\r\n  width: 30%;\r\n  line-height: 44px;\n}\n.chatRoom .topBar .back uni-image[data-v-16f9f836] {\r\n  width: 16px;\r\n  height: 16px;\r\n  text-align: center;\r\n  margin-left: 20px;\n}\n.chatRoom .topBar .tit[data-v-16f9f836] {\r\n  width: 100%;\r\n  height: 44px;\r\n  text-align: center;\r\n  line-height: 44px;\n}\n.chatRoom .topBar .groups[data-v-16f9f836] {\r\n  width: 30%;\r\n  line-height: 40px;\r\n  text-align: center;\n}\n.chatRoom .topBar .groups uni-image[data-v-16f9f836] {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 20px;\n}\n.chatRoom .chat[data-v-16f9f836] {\r\n  width: 100%;\r\n  height: 100%;\r\n  margin-top: 100px;\r\n  padding-bottom: 70px;\n}\n.chatRoom .chat .chat-con[data-v-16f9f836] {\r\n  width: 95%;\r\n  margin: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  transition: 1s;\n}\n.chatRoom .chat .chat-con .chat-ls[data-v-16f9f836] {\r\n  width: 100%;\r\n  overflow: hidden;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\n}\n.chatRoom .chat .chat-con .chat-ls .chat-time[data-v-16f9f836] {\r\n  width: 75px;\r\n  height: 17px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 12px;\r\n  color: rgba(39, 40, 50, 0.3);\r\n  letter-spacing: -0.41px;\r\n  font-weight: 400;\r\n  padding: 20px 0;\r\n  margin: auto;\r\n  text-align: center;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m[data-v-16f9f836] {\r\n  display: flex;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .profileP[data-v-16f9f836] {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 10px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg-con[data-v-16f9f836] {\r\n  max-width: 240px;\r\n  min-height: 20px;\r\n  height: auto;\r\n  background: #FFFFFF;\r\n  border-radius: 0px 10px 10px 10px;\r\n  margin: 0px 15px;\r\n  padding: 10px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg-con uni-text[data-v-16f9f836] {\r\n  font-size: 20px;\r\n  line-height: 20px;\r\n  letter-spacing: -0.55px;\r\n  margin: 3px 5px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg-con uni-image[data-v-16f9f836] {\r\n  max-width: 240px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg_con_img[data-v-16f9f836] {\r\n  background: none;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-right[data-v-16f9f836] {\r\n  flex-direction: row-reverse;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-right .msg-con[data-v-16f9f836] {\r\n  background: #fff054;\r\n  border-radius: 10px 0px 10px 10px;\n}\n.chatRoom .chat .chatScl[data-v-16f9f836] {\r\n  -webkit-transform: translateY(-200px);\r\n          transform: translateY(-200px);\n}\r\n", ""]);
+exports.push([module.i, "@charset \"UTF-8\";\r\n/**\r\n * 这里是uni-app内置的常用样式变量\r\n *\r\n * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量\r\n * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App\r\n *\r\n */\r\n/**\r\n * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能\r\n *\r\n * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件\r\n */\r\n/* 颜色变量 */\r\n/* 行为相关颜色 */\r\n/* 文字基本颜色 */\r\n/* 背景颜色 */\r\n/* 边框颜色 */\r\n/* 尺寸变量 */\r\n/* 文字尺寸 */\r\n/* 图片尺寸 */\r\n/* Border Radius */\r\n/* 水平间距 */\r\n/* 垂直间距 */\r\n/* 透明度 */\r\n/* 文章场景相关 */\n.chatRoom[data-v-16f9f836] {\r\n  width: 100%;\r\n  height: 100%;\r\n  background-color: rgba(128, 128, 128, 0.1);\n}\n.chatRoom .topBar[data-v-16f9f836] {\r\n  display: flex;\r\n  justify-content: space-between;\n}\n.chatRoom .topBar .back[data-v-16f9f836] {\r\n  width: 30%;\r\n  line-height: 44px;\n}\n.chatRoom .topBar .back uni-image[data-v-16f9f836] {\r\n  width: 16px;\r\n  height: 16px;\r\n  text-align: center;\r\n  margin-left: 20px;\n}\n.chatRoom .topBar .tit[data-v-16f9f836] {\r\n  width: 100%;\r\n  height: 44px;\r\n  text-align: center;\r\n  line-height: 44px;\n}\n.chatRoom .topBar .groups[data-v-16f9f836] {\r\n  width: 30%;\r\n  line-height: 40px;\r\n  text-align: center;\n}\n.chatRoom .topBar .groups uni-image[data-v-16f9f836] {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 20px;\n}\n.chatRoom .chat[data-v-16f9f836] {\r\n  width: 100%;\r\n  height: 100%;\r\n  margin-top: 100px;\r\n  padding-bottom: 70px;\n}\n.chatRoom .chat .chat-con[data-v-16f9f836] {\r\n  width: 95%;\r\n  margin: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: center;\r\n  transition: .3s;\n}\n.chatRoom .chat .chat-con .chat-ls[data-v-16f9f836] {\r\n  width: 100%;\r\n  overflow: hidden;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\n}\n.chatRoom .chat .chat-con .chat-ls .chat-time[data-v-16f9f836] {\r\n  width: 75px;\r\n  height: 17px;\r\n  font-family: PingFangSC-Regular;\r\n  font-size: 12px;\r\n  color: rgba(39, 40, 50, 0.3);\r\n  letter-spacing: -0.41px;\r\n  font-weight: 400;\r\n  padding: 20px 0;\r\n  margin: auto;\r\n  text-align: center;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m[data-v-16f9f836] {\r\n  display: flex;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .profileP[data-v-16f9f836] {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 10px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg-con[data-v-16f9f836] {\r\n  max-width: 240px;\r\n  min-height: 20px;\r\n  height: auto;\r\n  background: #FFFFFF;\r\n  border-radius: 0px 10px 10px 10px;\r\n  margin: 0px 15px;\r\n  padding: 10px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg-con uni-text[data-v-16f9f836] {\r\n  font-size: 20px;\r\n  line-height: 20px;\r\n  letter-spacing: -0.55px;\r\n  margin: 3px 5px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg-con uni-image[data-v-16f9f836] {\r\n  max-width: 240px;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-m .msg_con_img[data-v-16f9f836] {\r\n  background: none;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-right[data-v-16f9f836] {\r\n  flex-direction: row-reverse;\n}\n.chatRoom .chat .chat-con .chat-ls .msg-right .msg-con[data-v-16f9f836] {\r\n  background: #fff054;\r\n  border-radius: 10px 0px 10px 10px;\n}\n.chatRoom .chat .chatScl[data-v-16f9f836] {\r\n  -webkit-transform: translateY(-230px);\r\n          transform: translateY(-230px);\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 

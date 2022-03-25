@@ -21,7 +21,7 @@
 			</template>
 		</top-bar>
 		<view class="chat">
-			<view class="chat-con" :class="[{chatScl:isMore||isEmo}]">
+			<view class="chat-con" :class="[{chatScl:isMore}]">
 				<view class="chat-ls" v-for="(item,index) in msgArr" :key="index" :id="item.tip">
 					<view class="chat-time" v-if="item.time!==''">{{item.time}}</view>
 					<view class="msg-m msg-left" v-if="item.id!=='b'">
@@ -65,14 +65,13 @@
 				msgArr: [],
 				imgMsg: [],
 				oldTime: new Date(),
-				// pdInput:10
 				isMore:false,
-				isEmo:false,
 				contentHeight: 0
 			}
 		},
 		onLoad() {
 			this.getChatDate();
+			this.contentHeight = uni.getSystemInfoSync().windowHeight;
 			this.toBottom();
 		},
 		onPageScroll(){
@@ -125,7 +124,7 @@
 					}
 				})
 			},
-			// 文字
+			// 信息发送
 			subMsg(data) {
 				let msg = {
 					id: 'b',
@@ -140,14 +139,11 @@
 				this.toBottom()
 			},
 			// emo
-			showMore(){
-				
+			showMore(data){
+				this.isMore=data
 			},
 			
-			
 			// 返回底部
-			
-			
 			toBottom() {
 				this.contentHeight = uni.getSystemInfoSync().windowHeight;
 				this.$nextTick(function() {
@@ -217,7 +213,7 @@
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				transition: 1s;
+				transition: .3s;
 
 				.chat-ls {
 					width: 100%;
@@ -289,7 +285,7 @@
 
 			.chatScl {
 				// padding-bottom: ;
-				transform: translateY(-200px);
+				transform: translateY(-230px);
 			}
 		}
 	}

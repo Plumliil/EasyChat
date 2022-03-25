@@ -20,6 +20,28 @@
 					</view>
 				</view>
 			</view>
+			<view class="more" v-if="isMore">
+				<view class="imgs" @tap="subImg">
+					<image src="../../static/images/chat/imgs.png" mode=""></image>
+					<text>照片</text>
+				</view>
+				<view class="photo" @tap="subPto">
+					<image src="../../static/images/chat/photo.png" mode=""></image>
+					<text>拍摄</text>
+				</view>
+				<view class="adress" @tap="subAds">
+					<image src="../../static/images/chat/address.png" mode=""></image>
+					<text>位置</text>
+				</view>
+				<view class="video" @tap="subVid">
+					<image src="../../static/images/chat/video.png" mode=""></image>
+					<text>视频</text>
+				</view>
+				<view class="files" @tap="subFile">
+					<image src="../../static/images/chat/file.png" mode=""></image>
+					<text>文件</text>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -29,7 +51,7 @@
 		data() {
 			return {
 				isEmo: false,
-				isMore: true,
+				isMore: false,
 				msgCon: '',
 				emojis: [
 					['😀', '😁', '😂', '🤣', '😃'],
@@ -68,9 +90,8 @@
 				}
 				this.$nex
 			},
-
 			emoApear(e) {
-				if (this.isMore&&!this.isEmo) {
+				if (this.isMore && !this.isEmo) {
 					this.isEmo = !this.isEmo;
 				} else if (this.isMore && this.isEmo) {
 					this.isMore = false;
@@ -79,6 +100,7 @@
 					this.isMore = !this.isMore;
 					this.isEmo = !this.isEmo;
 				}
+				this.$emit('showMore', this.isMore);
 			},
 			selectEmo(emo) {
 				this.msgCon += emo;
@@ -91,8 +113,14 @@
 					this.isMore = !this.isMore;
 				}
 
-				this.$emit('showMore', this.isMore)
-			}
+				this.$emit('showMore', this.isMore);
+			},
+			// 功能
+			subImg() {},
+			subPto() {},
+			subAds() {},
+			subVid() {},
+			subFile() {}
 		}
 	}
 </script>
@@ -100,13 +128,15 @@
 <style lang="scss">
 	.submit {
 		width: 100%;
-		height: 240px;
+		height: 270px;
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		padding-top: 5px;
-		transform: translateY(195px);
-		transition: 1s;
+		transform: translateY(225px);
+		background-color: #e8eaec;
+		transition: .3s;
+		z-index: 999;
 
 		.main {
 			display: flex;
@@ -151,13 +181,13 @@
 		.other {
 			width: 100%;
 			height: 200px;
-			background-color: pink;
 
 			.emo {
 				width: 90%;
 				height: 100%;
 				overflow-y: scroll;
 				margin: auto;
+				padding-top: 10px;
 
 				.emoji {
 					width: 100%;
@@ -175,11 +205,51 @@
 					}
 				}
 			}
+
+			.more {
+				width: 90%;
+				height: 100%;
+				padding-top: 10px;
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+				background-color: #e8eaec;
+				margin: auto;
+				transition: 1s;
+				// justify-content: center;
+
+
+				view {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					width: 80px;
+					height: 80px;
+					margin-top: 3px;
+
+					text {
+						font-size: 14px;
+						padding-top: 3px;
+						color: gray;
+
+					}
+
+					image {
+						width: 40px;
+						height: 40px;
+						padding: 10px;
+						border-radius: 10px;
+						background-color: white;
+					}
+				}
+
+			}
 		}
 	}
 
 	.subTrans {
-		transition: 1s;
+		transition: .5s;
 		transform: translateY(0);
 	}
 </style>
