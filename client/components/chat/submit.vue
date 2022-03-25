@@ -2,10 +2,10 @@
 	<view :class="[{submit:true},{subTrans:isMore}]">
 		<view class="main">
 			<view class="voice">
-				<image src="../../static/images/chat/voice.png" mode=""></image>
+				<image src="../../static/images/chat/audio.png" mode=""></image>
 			</view>
 			<view class="message">
-				<textarea type="text" value="" v-model="msgCon" @input="subMsg"></textarea>
+				<textarea v-model="msgCon" @input="subMsg"></textarea>
 			</view>
 			<view class="fn">
 				<image @tap="emoApear" src="../../static/images/chat/emo.png" mode=""></image>
@@ -13,7 +13,7 @@
 			</view>
 		</view>
 		<view class="other">
-			<view class="emo">
+			<view class="emo" v-if="isMore&&isEmo">
 				<view class="emoji" v-for="(line,i) in emojis">
 					<view class="" v-for="(item,index) in line" @tap="selectEmo(item)">
 						{{item}}
@@ -29,7 +29,7 @@
 		data() {
 			return {
 				isEmo: false,
-				isMore: false,
+				isMore: true,
 				msgCon: '',
 				emojis: [
 					['😀', '😁', '😂', '🤣', '😃'],
@@ -46,28 +46,52 @@
 
 		},
 		methods: {
+			// 发送文字
 			subMsg(e) {
-				let pos = this.msgCon.indexOf('\n');
+				let chatm = e.detail.value;
+				let pos = chatm.indexOf('\n');
 				let conRxg = /^\n+$/g;
-				let flag = conRxg.test(this.msgCon);
-				if (pos !== -1 && !flag && this.msgCon.length > 0) {
+				let flag = conRxg.test(chatm);
+				// 解决多次回车不发送
+				if (flag) {
+					console.log('flag:', true);
+					this.$nextTick(function() {
+						this.msgCon = '';
+					})
+				}
+				if (pos !== -1 && chatm.length > 1 && !flag) {
 					this.$emit('subMsg', this.msgCon);
 					setTimeout(() => {
 						this.msgCon = '';
-					}, 0)
+					}, 1)
+					this.msgCon = '';
+				}
+				this.$nex
+			},
+
+			emoApear(e) {
+				if (this.isMore&&!this.isEmo) {
+					this.isEmo = !this.isEmo;
+				} else if (this.isMore && this.isEmo) {
+					this.isMore = false;
+					this.isEmo = false;
+				} else {
+					this.isMore = !this.isMore;
+					this.isEmo = !this.isEmo;
 				}
 			},
-			emoApear(e) {
-				console.log(e);
-				// this.msgCon=
-			},
 			selectEmo(emo) {
-				console.log(emo);
 				this.msgCon += emo;
 			},
+			// 其他
 			more() {
-				this.isMore = !this.isMore;
-				this.$emit('hightChange', this.isMore)
+				if (this.isEmo) {
+					this.isEmo = !this.isEmo;
+				} else {
+					this.isMore = !this.isMore;
+				}
+
+				this.$emit('showMore', this.isMore)
 			}
 		}
 	}

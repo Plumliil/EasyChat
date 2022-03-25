@@ -21,7 +21,7 @@
 			</template>
 		</top-bar>
 		<view class="chat">
-			<view class="chat-con" :class="[{chatScl:isMore}]">
+			<view class="chat-con" :class="[{chatScl:isMore||isEmo}]">
 				<view class="chat-ls" v-for="(item,index) in msgArr" :key="index" :id="item.tip">
 					<view class="chat-time" v-if="item.time!==''">{{item.time}}</view>
 					<view class="msg-m msg-left" v-if="item.id!=='b'">
@@ -46,7 +46,7 @@
 			</view>
 		</view>
 
-		<submit @subMsg="subMsg" @hightChange="hightChange"></submit>
+		<submit @subMsg="subMsg" @showMore="showMore"></submit>
 	</view>
 </template>
 
@@ -67,6 +67,7 @@
 				oldTime: new Date(),
 				// pdInput:10
 				isMore:false,
+				isEmo:false,
 				contentHeight: 0
 			}
 		},
@@ -126,7 +127,6 @@
 			},
 			// 文字
 			subMsg(data) {
-				console.log(data);
 				let msg = {
 					id: 'b',
 					imgUrl: '../../static/images/index/p1.jpeg',
@@ -139,7 +139,15 @@
 				console.log(this.msgArr);
 				this.toBottom()
 			},
+			// emo
+			showMore(){
+				
+			},
+			
+			
 			// 返回底部
+			
+			
 			toBottom() {
 				this.contentHeight = uni.getSystemInfoSync().windowHeight;
 				this.$nextTick(function() {
@@ -150,10 +158,6 @@
 				})
 			},
 			
-			hightChange(data) {
-				this.isMore = data;
-				this.toBottom()
-			}
 		}
 	}
 </script>

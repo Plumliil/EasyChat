@@ -462,7 +462,7 @@ var render = function() {
           subMsg: function($event) {
             return _vm.$handleViewEvent($event)
           },
-          hightChange: function($event) {
+          showMore: function($event) {
             return _vm.$handleViewEvent($event)
           }
         }
@@ -1342,7 +1342,7 @@ var render = function() {
             { staticClass: _vm._$g(4, "sc"), attrs: { _i: 4 } },
             [
               _c("v-uni-textarea", {
-                attrs: { type: "text", value: "", _i: 5 },
+                attrs: { _i: 5 },
                 on: {
                   input: function($event) {
                     return _vm.$handleViewEvent($event)
@@ -1387,42 +1387,44 @@ var render = function() {
         "v-uni-view",
         { staticClass: _vm._$g(9, "sc"), attrs: { _i: 9 } },
         [
-          _c(
-            "v-uni-view",
-            { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
-            _vm._l(_vm._$g(11, "f"), function(line, i, $20, $30) {
-              return _c(
+          _vm._$g(10, "i")
+            ? _c(
                 "v-uni-view",
-                {
-                  key: line,
-                  staticClass: _vm._$g("11-" + $30, "sc"),
-                  attrs: { _i: "11-" + $30 }
-                },
-                _vm._l(_vm._$g(12 + "-" + $30, "f"), function(
-                  item,
-                  index,
-                  $21,
-                  $31
-                ) {
+                { staticClass: _vm._$g(10, "sc"), attrs: { _i: 10 } },
+                _vm._l(_vm._$g(11, "f"), function(line, i, $20, $30) {
                   return _c(
                     "v-uni-view",
                     {
-                      key: item,
-                      attrs: { _i: "12-" + $30 + "-" + $31 },
-                      on: {
-                        click: function($event) {
-                          return _vm.$handleViewEvent($event)
-                        }
-                      }
+                      key: line,
+                      staticClass: _vm._$g("11-" + $30, "sc"),
+                      attrs: { _i: "11-" + $30 }
                     },
-                    [_vm._v(_vm._$g("12-" + $30 + "-" + $31, "t0-0"))]
+                    _vm._l(_vm._$g(12 + "-" + $30, "f"), function(
+                      item,
+                      index,
+                      $21,
+                      $31
+                    ) {
+                      return _c(
+                        "v-uni-view",
+                        {
+                          key: item,
+                          attrs: { _i: "12-" + $30 + "-" + $31 },
+                          on: {
+                            click: function($event) {
+                              return _vm.$handleViewEvent($event)
+                            }
+                          }
+                        },
+                        [_vm._v(_vm._$g("12-" + $30 + "-" + $31, "t0-0"))]
+                      )
+                    }),
+                    1
                   )
                 }),
                 1
               )
-            }),
-            1
-          )
+            : _vm._e()
         ],
         1
       )
