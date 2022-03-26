@@ -1,16 +1,12 @@
-const { User } = require('../model');
-
+const {User}=require('../model/index')
 
 exports.findUser = async (req, res) => {
-    console.log(req,res);
-    const user=await User.find()
+    // console.log(req,res);
+    // const user=await User.find()
+    console.log(User.find());
     res.status(201).json({
         state: 'success',
         test:'test',
-        user:user
+        user:JSON.stringify(User.find())
     })
-    // User.find((err, dsata) => {
-    //     if (err) return console.log('用户数据查找失败', err);
-    //     res.send(data);
-    // });
 }

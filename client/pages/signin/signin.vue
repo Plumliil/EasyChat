@@ -31,9 +31,12 @@
 		data() {
 			return {
 				isValid: true,
-				user:'',
-				password:''
+				user: '',
+				password: ''
 			}
+		},
+		onLoad() {
+			// this.testFn();
 		},
 		methods: {
 			// 跳转
@@ -42,14 +45,24 @@
 					url: '../signup/signup'
 				})
 			},
-			subSignin(){
-				if (!this.user||!this.password) return this.isValid=false;
-				this.isValid=true;
-				let userData={
-					user:this.user,
-					password:this.password
+			subSignin() {
+				this.testFn()
+				if (!this.user || !this.password) return this.isValid = false;
+				this.isValid = true;
+				let userData = {
+					user: this.user,
+					password: this.password
 				}
 				console.log(userData);
+			},
+			testFn() {
+				uni.request({
+					url: 'http://localhost:3000/api/test',
+					method: 'GET',
+					success(data) {
+						console.log(data);
+					}
+				})
 			}
 		}
 	}
