@@ -18,7 +18,7 @@ const userSchema = new Schema({
 const friendSchema = new Schema({
     userID: { type: Schema.Types.ObjectId, ref: 'User' },       // 用户id                  
     frinedID: { type: Schema.Types.ObjectId, ref: 'User' },     // 好友id   
-    markName:{type:String}                                      // 好友昵称                         
+    markName:{type:String},                                      // 好友昵称                         
     state: { type: String },                                    // 状态(0已为好友,1申请中,2申请发送方,对方不同意)
     time: { type: Date },                                       // 注册时间
 })

@@ -57,7 +57,7 @@
 			},
 			testFn() {
 				uni.request({
-					url: 'http://localhost:3000/api/test',
+					url: 'http://localhost:3000/api/t,
 					method: 'GET',
 					success(data) {
 						console.log(data);

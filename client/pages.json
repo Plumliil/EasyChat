@@ -6,19 +6,20 @@
 		// 		"navigationStyle": "custom"
 		// 	}
 		// },
-		{
-			"path": "pages/signin/signin",
-			"style": {
-				"navigationStyle": "custom"
-			}
-		}
+		// {
+		// 	"path": "pages/signin/signin",
+		// 	"style": {
+		// 		"navigationStyle": "custom"
+		// 	}
+		// }
 		// ,
 		// {
 		// 	"path": "pages/signup/signup",
 		// 	"style": {
 		// 		"navigationStyle": "custom"
 		// 	}
-		// },
+		// }
+		// ,
 		// {
 		// 	"path": "pages/search/search",
 		// 	"style": {
@@ -51,7 +52,17 @@
 		// 	}
 
 		// }
-	],
+	    // 
+		{
+            "path" : "pages/test/test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "EasyChat",

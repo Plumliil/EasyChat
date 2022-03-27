@@ -1,1 +1,0 @@
-const dbmodel=require('../model/dbmodel')
